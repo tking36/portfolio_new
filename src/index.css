@@ -5,9 +5,336 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  box-sizing: border-box; /* ensure padding and border don't affect width/height */
+}
+
+.section-1 {
+  height: 100vh;
+}
+
+/* Hexagons Hexagons Hexagons Hexagons Hexagons Hexagons Hexagons Hexagons */
+
+.cont {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+
+ .container{
+  animation: animate 4s linear infinite;
+  position: relative;
+  /* overflow: hidden; */
+ }
+ @keyframes animate {
+  0% {
+    filter: hue-rotate(0deg)
+  }
+  100% {
+    filter: hue-rotate(360deg)
+  }
+ }
+
+ .row{
+  display: inline-flex;
+  margin-top: -32px;
+  margin-left: -50px;
+ }
+
+ .row:nth-child(even) {
+  margin-left: 1px;
+ }
+
+ .hexagon {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  background-color: #111;
+  margin: 2px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 2s;
+ }
+
+ .hexagon:hover {
+  transition: 0s;
+  background-color: green;
+ }
+
+ .hexagon::after{
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  background-color: #111;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: 1;
+ }
+
+ .hexagon:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(255,255,255, 0.02);
+  z-index: 1000;
+ }
+
+ /* Hexagons Hexagons Hexagons Hexagons Hexagons Hexagons Hexagons Hexagons */
+
+
+ /* Button Button Button Button Button Button Button Button Button Button Button Button  */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+/* Button Button Button Button Button Button Button Button Button Button Button Button  */
+
+.home-cont {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* About About About About About About About About About About  */
+
+.section-2{
+  z-index: 100;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  height: 100vh;
+}
+
+.about{
+  margin-bottom: 100px;
+}
+
+.attributes{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.att-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.att-pic{
+  width: 70px;
+  height: 80px;
+  background-color: white;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.about-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.about-me{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+
+.about-img{
+  width: 100px;
+  height: 110px;
+  background-color: white;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.skills{
+  width: 40%;
+}
+
+.skill{
+  background-color: black;
+}
+
+/* About About About About About About About About About About  */
+
+/* Projects Projects Projects Projects Projects Projects Projects */
+
+.section-3{
+  z-index: 100;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue;
+  height: 100vh;
+}
+
+.project-cont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+}
+.project{
+  
+  height: 30%;
+  background-color: white;
+  margin: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-lang{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.project-btn{
+  margin: 30px;
+  width: 70px;
+  height: 35px;
+}
+
+/* Projects Projects Projects Projects Projects Projects Projects */
+
+/* Contact Contact Contact Contact Contact Contact Contact Contact */
+
+.section-4{
+  z-index: 100;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: green;
+  height: 100vh;
+}
+
+.contact{
+  margin-top: 80px;
+}
+
+form {
+  max-width: 70%;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  margin-top: 0px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+.message-area{
+  height: 200px;
+}
+
+input[type="submit"] {
+  background-color: #2e4484;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+.email-form{
+  padding-right: 0rem;
+}
+
+/* Contact Contact Contact Contact Contact Contact Contact Contact */
+
+/* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
+
+.navbar{
+  width: 98%;
+}
+
+/* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
+
