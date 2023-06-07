@@ -19,8 +19,9 @@ const Home = () => {
             </div>
         </section>
         
-        <section className='section-2' >
+        <div className='info-container' >
         <Navigation />
+        <section className='section-2' >
             <About />
         </section>
         <section className='section-3' >
@@ -29,6 +30,7 @@ const Home = () => {
         <section className='section-4' >
             <Email />
         </section>
+        </div>
     </>
   );
 };

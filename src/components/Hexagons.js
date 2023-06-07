@@ -16,9 +16,9 @@ const Hexagons = () => {
     ));
 
   return (
-    <Container fluid className='cont'>
+    <div fluid className='cont'>
             <div className='container background'>{renderHexagons()}</div>
-            </Container>
+            </div>
   )
 }
 

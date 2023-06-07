@@ -18,6 +18,10 @@ section {
   box-sizing: border-box; /* ensure padding and border don't affect width/height */
 }
 
+.info-container{
+  position: relative;
+}
+
 .section-1 {
   height: 100vh;
 }
@@ -333,8 +337,30 @@ input[type="submit"]:hover {
 /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
 
 .navbar{
-  width: 98%;
+  width: 99%;
+  background-color: black;
+  border: white solid 1px;
+  padding: 0px;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  z-index: 1000;
 }
+
+.nav-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin-left: 20px;
+   color: white;
+}
+
+
+
+
 
 /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
 
