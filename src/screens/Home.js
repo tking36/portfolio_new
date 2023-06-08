@@ -10,24 +10,24 @@ const Home = () => {
   return (
     <>
 
-        <section className='section-1' >
+        <section id='section-1' className='section-1' >
             <Hexagons />
             <div className='home-cont'>
                 <h1>Hello I am Taylor</h1>
                 <h2>Full Stack Web Developer</h2>
-                <button className='button-54' role='button'>Button 54</button>
+                <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Button 54</a>  </button>
             </div>
         </section>
         
         <div className='info-container' >
         <Navigation />
-        <section className='section-2' >
+        <section id='section-2' className='section-2' >
             <About />
         </section>
-        <section className='section-3' >
+        <section id='section-3' className='section-3' >
             <Projects />
         </section>
-        <section className='section-4' >
+        <section id='section-4' className='section-4' >
             <Email />
         </section>
         </div>
@@ -37,16 +37,3 @@ const Home = () => {
 
 export default Home;
 
-
-
-{/* <section className='section-1' >
-    <h1 className='title' >Home</h1>
-  </section>
-
-  <section className='section-2' >
-    <h1 className='title' >Section 2</h1>
-  </section>
-
-  <section >
-    <h1 className='title' >Section 3</h1>
-  </section> */}
