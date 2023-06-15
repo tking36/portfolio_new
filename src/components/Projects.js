@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Projects = () => {
   const projectData = [
@@ -38,6 +38,7 @@ const Projects = () => {
 
   
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -47,15 +48,34 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
-  console.log(selectedProject);
+
+
+  useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 500);
+      };
+  
+      handleResize(); // Call the handler initially
+  
+      // Add event listener to handle window resize
+      window.addEventListener('resize', handleResize);
+  
+      // Clean up the event listener when component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
   return (
     <>
       <h1 className='projects'>PROJECTS</h1>
+      <div className="project-line"></div>
       <div className='project-cont'>
         {projectData.map((project, index) => (
-          <div className='project' key={index}>
+          <div className='project' onClick={isMobile ? () => openModal(project) : null} key={index}> 
             <img src={project.imgSrc} className='project-img' alt={`Project ${index + 1}`} />
+            {!isMobile ?
+            <>
             <div className='project-info' >
                 <h2 className='project-title' >{project.title}</h2>
                 <h3 className='project-lang'>{project.details}</h3>
@@ -63,6 +83,8 @@ const Projects = () => {
             <button className='project-btn' onClick={() => openModal(project)}>
               Learn More
             </button>
+            </>
+          : null }
           </div>
         ))}
       </div>
@@ -73,6 +95,7 @@ const Projects = () => {
             <span className='close' onClick={closeModal}>&times;</span>
             <img className='modal-img' src={selectedProject.imgSrc} alt={selectedProject.title} />
             <h2 className='modal-title' >{selectedProject.title}</h2>
+            {isMobile ? <h3 className='project-lang'>{selectedProject.details}</h3> : null}
             <hr />
             <p>{selectedProject.info}</p>
             <div className='modal-links'>

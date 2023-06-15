@@ -38,7 +38,8 @@ const form = useRef();
 
   return (
     <>
-        <h1 className='contact'>Contact</h1>
+        <h1 className='contact'>CONTACT</h1>
+        <div className="line"></div>
         <h3 className="contact-info" >Reach Out</h3>
       <div className="email-form">
         <form ref={form} onSubmit={sendEmail}>

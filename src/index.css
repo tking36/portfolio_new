@@ -25,6 +25,13 @@ section {
   margin-bottom: 100px;
 }
 
+.project-line{
+  width: 100px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
 .info-container{
   position: relative;
 }
@@ -614,4 +621,138 @@ html{
 
 
 /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
+
+
+@media screen and (max-width: 500px) {
+
+  .cont{
+    overflow-y: hidden;
+  }
+
+  /* About About About About About About About About About */
+
+  .section-2{
+    height: auto;
+  }
+
+  .about{
+    margin-bottom: 2px;
+  }
+
+  .about-info{
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .line{
+    margin-bottom: 5px;
+  }
+
+  .attributes{
+  flex-wrap: wrap;
+  margin-top: 30px;
+  }
+
+  .att-cont{
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .att-title{
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .att-info{
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .att-pic{
+    width: 50px;
+    height: 55px;
+  }
+
+  .about-info-sect{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .about-disc{
+    width: 300px;
+  }
+
+  .skills{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-img{
+    width: 100px;
+    height: 110px;
+  }
+
+  /* About About About About About About About About About */
+
+  /* Projects Projects Projects Projects Projects Projects Projects */
+
+  .section-3{
+    height: auto;
+  }
+
+.projects{
+  margin-bottom: 2px;
+}
+
+.project-line{
+  margin-bottom: 20px;
+}
+
+.project-cont{
+  
+}
+
+.project{
+  width: 200px;
+  height: 200px;
+}
+
+.project-info{
+  margin-bottom: 0px;
+}
+
+.project-btn {
+  height: 50px;
+  width: 100px;
+}
+
+.modal{
+  z-index: 1000;
+}
+
+.project-lang{
+  margin-bottom: 10px;
+}
+
+
+  /* Projects Projects Projects Projects Projects Projects Projects */
+
+  /* Contact Contact Contact Contact Contact Contact Contact Contact */
+
+  .email-form{
+    display: none;
+  }
+
+  /* Contact Contact Contact Contact Contact Contact Contact Contact */
+
+
+
+
+}
+  
 
