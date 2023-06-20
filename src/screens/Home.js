@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import About from '../components/About';
 import Hexagons from '../components/Hexagons';
 import Projects  from '../components/Projects';
@@ -6,6 +6,24 @@ import Email from '../components/Email';
 import Navigation from '../components/Navigation';
 
 const Home = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 500);
+        };
+    
+        handleResize(); // Call the handler initially
+    
+        // Add event listener to handle window resize
+        window.addEventListener('resize', handleResize);
+    
+        // Clean up the event listener when component unmounts
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
   return (
     <>

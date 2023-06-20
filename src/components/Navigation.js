@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Navigation = () => {
+
   const [section, setSection] = useState('section-1');
 
   const handleClick = (num) => {
