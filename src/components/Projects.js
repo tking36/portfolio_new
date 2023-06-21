@@ -42,10 +42,12 @@ const Projects = () => {
 
   const openModal = (project) => {
     setSelectedProject(project);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setSelectedProject(null);
+    document.body.style.overflow = 'auto';
   };
 
 

@@ -609,7 +609,7 @@ input[type="submit"]:hover {
 }
 
 .nav-link:hover {
-  background-color: red; /* Change to the desired background color */
+  background-color: red; 
   cursor: pointer;
 }
 
@@ -623,16 +623,38 @@ html{
 /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
 
   .cont{
     overflow-y: hidden;
   }
 
+  /* Home Home Home Home Home Home Home Home Home Home Home Home */
+
+  .taylor{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .full-stack{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .web-dev{
+    margin-top: 0px;
+  }
+
+  /* Home Home Home Home Home Home Home Home Home Home Home Home */
+
   /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
 
   .nav-links{
     margin-left: 0px;
+  }
+
+  .nav-link:hover{
+    background-color: black;
   }
 
   /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
@@ -756,6 +778,10 @@ html{
 
   .section-4{
     z-index: 0;
+  }
+
+  .contact{
+    margin-bottom: 2px;
   }
 
   .email-form{

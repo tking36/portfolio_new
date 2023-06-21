@@ -31,8 +31,18 @@ const Home = () => {
         <section id='section-1' className='section-1' >
             <Hexagons />
             <div className='home-cont'>
+                {isMobile ?
+                <>
+                <h1 className='taylor' >Hello I am Taylor</h1>
+                <h2 className='full-stack' >Full Stack</h2>
+                <h2 className='web-dev' >Web Developer</h2>
+                </>
+                :
+                <>
                 <h1>Hello I am Taylor</h1>
                 <h2>Full Stack Web Developer</h2>
+                </>
+                }
                 <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Button 54</a>  </button>
             </div>
         </section>

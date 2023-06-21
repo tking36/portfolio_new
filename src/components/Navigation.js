@@ -5,7 +5,9 @@ const Navigation = () => {
   const [section, setSection] = useState('section-1');
 
   const handleClick = (num) => {
+    setTimeout(() => {
     setSection(num);
+    }, 500);
   };
 
   useEffect(() => {
