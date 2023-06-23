@@ -623,11 +623,12 @@ html{
 /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
 
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
 
   .cont{
     overflow-y: hidden;
   }
+
 
   /* Home Home Home Home Home Home Home Home Home Home Home Home */
 
@@ -648,6 +649,7 @@ html{
   /* Home Home Home Home Home Home Home Home Home Home Home Home */
 
   /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
+
 
   .nav-links{
     margin-left: 0px;
@@ -793,10 +795,35 @@ html{
   }
 
   /* Contact Contact Contact Contact Contact Contact Contact Contact */
+}
 
+@media screen and (max-width: 900px) and (min-width: 581px) {
 
+  .cont{
+    overflow-y: hidden;
+  }
 
+  .att-title{
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 
+  .att-info{
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .skills{
+    width: 350px;
+  }
+
+  .skill-group{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
   
 
