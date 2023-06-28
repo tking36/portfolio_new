@@ -184,6 +184,7 @@ section {
 
 .about{
   margin-top: 65px;
+  margin-bottom: 10px;
 }
 
 .attributes{
@@ -318,6 +319,7 @@ section {
 
 .projects{
   margin-top: 65px;
+  margin-bottom: 10px;
 }
 
 .project {
@@ -497,6 +499,7 @@ hr{
 
 .contact{
   margin-top: 65px;
+  margin-bottom: 10px;
 }
 
 form {
@@ -825,5 +828,18 @@ html{
     margin-right: 5px;
   }
 }
+
+@media screen and (min-width: 1690px) {
+  .section-3{
+    height: 100vh;
+  }
+}
+
+/* @media  screen and (min-width: 1274px) {
+  .project {
+    width: calc(400px - 10px);
+  } */
+  
+/* } */
   
 
