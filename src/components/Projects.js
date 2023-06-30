@@ -84,6 +84,7 @@ const Projects = () => {
 
   return (
     <>
+      
       <h1 className='projects slide-in-right'>PROJECTS</h1>
       <div className="project-line slide-in-left"></div>
       <div className='project-cont slide-in-bottom'>

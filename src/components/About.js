@@ -24,7 +24,7 @@ const About = () => {
         const elements = document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-top, .slide-in-bottom');
         elements.forEach((element) => {
           const elementPosition = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight * 0.7;
+          const windowHeight = window.innerHeight * 0.8;
       
           if (elementPosition < windowHeight) {
             element.classList.add('active');

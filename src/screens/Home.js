@@ -43,7 +43,7 @@ const Home = () => {
                 <h2>Full Stack Web Developer</h2>
                 </>
                 }
-                <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Button 54</a>  </button>
+                <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Learn More</a>  </button>
             </div>
         </section>
         
