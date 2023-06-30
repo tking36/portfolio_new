@@ -50,6 +50,20 @@ const Projects = () => {
     document.body.style.overflow = 'auto';
   };
 
+  function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-top, .slide-in-bottom');
+    elements.forEach((element) => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight * 0.7;
+  
+      if (elementPosition < windowHeight) {
+        element.classList.add('active');
+      } 
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+
 
 
   useEffect(() => {
@@ -70,9 +84,9 @@ const Projects = () => {
 
   return (
     <>
-      <h1 className='projects'>PROJECTS</h1>
-      <div className="project-line"></div>
-      <div className='project-cont'>
+      <h1 className='projects slide-in-right'>PROJECTS</h1>
+      <div className="project-line slide-in-left"></div>
+      <div className='project-cont slide-in-bottom'>
         {projectData.map((project, index) => (
           <div className='project' onClick={isMobile ? () => openModal(project) : null} key={index}> 
             <img src={project.imgSrc} className='project-img' alt={`Project ${index + 1}`} />

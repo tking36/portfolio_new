@@ -36,12 +36,26 @@ const form = useRef();
       });
   };
 
+  function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-top, .slide-in-bottom');
+    elements.forEach((element) => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight * 0.7;
+  
+      if (elementPosition < windowHeight) {
+        element.classList.add('active');
+      } 
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+
   return (
     <>
-        <h1 className='contact'>CONTACT</h1>
-        <div className="line"></div>
-        <h3 className="contact-info" >Reach Out</h3>
-      <div className="email-form">
+        <h1 className='contact slide-in-top'>CONTACT</h1>
+        <div className="line slide-in-bottom"></div>
+        <h3 className="contact-info slide-in-left" >Reach Out</h3>
+      <div className="email-form slide-in-right">
         <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" value={name} onChange={handleNameChange} />
@@ -53,6 +67,7 @@ const form = useRef();
         </form>
       </div>
       <button className='button-54'> <a className='home-link' href='#section-1' >Button 54</a>  </button>
+      
     </>
   );
 }

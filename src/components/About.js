@@ -20,30 +20,46 @@ const About = () => {
         };
       }, []);
 
+      function handleScrollAnimation() {
+        const elements = document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-top, .slide-in-bottom');
+        elements.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight * 0.7;
+      
+          if (elementPosition < windowHeight) {
+            element.classList.add('active');
+          } 
+        });
+      }
+      
+      window.addEventListener('scroll', handleScrollAnimation);
+      
+
   return (
     <>
-    <h1 className='about'>ABOUT</h1>
-            <div className="line"></div>
+    <h1 className='about slide-in-left'>ABOUT</h1>
+    <div className='triangle-down' ></div>
+            <div className="line slide-in-right"></div>
             <div className='attributes'>
-                <div className='att-cont' >
+                <div className='att-cont slide-in-right' >
                     <div className='att-pic'></div>
                     <h2 className='att-title'>Front End</h2>
                     <h3 className='att-info'>blahh blaahh blaaahh</h3>
                 </div>
 
-                <div className='att-cont' >
+                <div className='att-cont slide-in-left' >
                     <div className='att-pic'></div>
                     <h2 className='att-title'>Back End</h2>
                     <h3 className='att-info'>blahh blaahh blaaahh</h3>
                 </div>
 
-                <div className='att-cont' >
+                <div className='att-cont slide-in-right' >
                     <div className='att-pic'></div>
                     <h2 className='att-title'>Other</h2>
                     <h3 className='att-info'>blahh blaahh blaaahh</h3>
                 </div>
 
-                <div className='att-cont' >
+                <div className='att-cont slide-in-left' >
                     <div className='att-pic'></div>
                     <h2 className='att-title'>Other</h2>
                     <h3 className='att-info'>blahh blaahh blaaahh</h3>
@@ -54,7 +70,7 @@ const About = () => {
                 <div className='about-me'>
                     {isMobile ?
                     <>
-                    <div className='about-info-sect' >
+                    <div className='about-info-sect slide-in-left' >
                         <img src='https://i.imgur.com/Sypy7sg.jpg' className='about-img'></img>
                         <h2>Who am I?</h2>
                     </div>
@@ -62,14 +78,14 @@ const About = () => {
                     </>
                     :
                     <>
-                        <img src='https://i.imgur.com/Sypy7sg.jpg' className='about-img'></img>
-                        <h2>Who am I?</h2>
-                        <p className='about-disc'>Whether on a construction site or in the office, I always strive to create new things efficiently and creatively. Mastering the tools of my trade, I seek out the best techniques and apply them to achieve a product worth making.</p>
+                        <img src='https://i.imgur.com/Sypy7sg.jpg' className='about-img slide-in-left'></img>
+                        <h2 className='slide-in-left' >Who am I?</h2>
+                        <p className='about-disc slide-in-left'>Whether on a construction site or in the office, I always strive to create new things efficiently and creatively. Mastering the tools of my trade, I seek out the best techniques and apply them to achieve a product worth making.</p>
                     </>
                     }
                 </div>
 
-                <div className='skills'>
+                <div className='skills slide-in-bottom'>
                     <h2 className='skills-title' >Skills</h2>
                     <div className='skill-cont'>
                     <div className="skill-group">
