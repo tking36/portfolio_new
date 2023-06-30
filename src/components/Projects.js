@@ -42,12 +42,12 @@ const Projects = () => {
 
   const openModal = (project) => {
     setSelectedProject(project);
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open'); // Add the 'modal-open' class to the body element
   };
 
   const closeModal = () => {
     setSelectedProject(null);
-    document.body.style.overflow = 'auto';
+    document.body.classList.remove('modal-open'); // Remove the 'modal-open' class from the body element
   };
 
   function handleScrollAnimation() {

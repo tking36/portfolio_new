@@ -33,6 +33,21 @@ const About = () => {
       }
       
       window.addEventListener('scroll', handleScrollAnimation);
+
+      const [isModalOpen, setIsModalOpen] = useState(false); // Add this line
+
+      // ...
+    
+      const openModal = () => {
+        setIsModalOpen(true);
+        document.body.classList.add('modal-open'); // Add the 'modal-open' class to the body element
+      };
+      
+      const closeModal = () => {
+        setIsModalOpen(false);
+        document.body.classList.remove('modal-open'); // Remove the 'modal-open' class from the body element
+      };
+      
       
 
   return (
@@ -81,6 +96,7 @@ const About = () => {
                         <img src='https://i.imgur.com/Sypy7sg.jpg' className='about-img slide-in-left'></img>
                         <h2 className='slide-in-left' >Who am I?</h2>
                         <p className='about-disc slide-in-left'>Whether on a construction site or in the office, I always strive to create new things efficiently and creatively. Mastering the tools of my trade, I seek out the best techniques and apply them to achieve a product worth making.</p>
+                        <button className='button-54' onClick={openModal}>More About Me</button>
                     </>
                     }
                 </div>
@@ -117,9 +133,26 @@ const About = () => {
                         </div>
                     </div>
                     </div>
-
                 </div>
             </div>
+
+            {isModalOpen && ( // Render the modal only if isModalOpen is true
+        <div className='modal'>
+          <div className='modal-content'>
+            <div className='modal-header'>
+              <h2>More About Me</h2>
+              <span className='close' onClick={closeModal}>&times;</span>
+            </div>
+            <hr></hr>
+            <div className='modal-body'>I am a Carpenter based in Woodstock, Georgia. I am interested in becoming a Software Engineer.Carpentry has always been a great passion of mine. I love brainstorming ideas, creating new designs, and executing projects with different techniques and tools.
+            Throughout my time researching Software Engineering, I began to see the similarities between these two fields. Although Carpentry deals with physical projects and Software Engineering deals with digital projects, in both fields, I have the opportunity to create something new that has the potential for functionality and to be aesthetically pleasing by using many different techniques and tools.</div>
+          </div>
+        </div>
+      )}
+
+
+
+        
     </>
   )
 }
