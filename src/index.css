@@ -284,6 +284,15 @@ section {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+.resume-button{
+margin-left: 20px;
+}
+
+.resume-link{
+  text-decoration: none;
+  color: black;
+}
+
 .skills{
   display: flex;
   flex-direction: column;
@@ -615,6 +624,7 @@ input[type="submit"]:hover {
 }
 .email-form{
   padding-right: 0rem;
+  margin-bottom: 30px;
 }
 
 /* Contact Contact Contact Contact Contact Contact Contact Contact */
@@ -689,6 +699,39 @@ html{
 
 /* Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar Navbar */
 
+/* Social Social Social Social Social Social Social Social Social Social Social Social */
+
+.link-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  /* padding: 0 10px; */
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.link-me{
+  color: cyan;
+  /* background-color: rgba(0, 0, 0, 0.7) !important; */
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 30px;
+margin-left: 2rem;
+margin-right: 2rem;
+}
+
+/* Social Social Social Social Social Social Social Social Social Social Social Social */
+
 
 @media screen and (max-width: 580px) {
 
@@ -734,6 +777,10 @@ html{
 
   .section-2{
     height: auto;
+  }
+
+  .triangle-down{
+    display: none;
   }
 
   .about{
@@ -788,6 +835,18 @@ html{
     width: 300px;
   }
 
+  .about-links{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .more-about{
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+
   .skills{
     width: 100%;
     margin-bottom: 20px;
@@ -796,6 +855,11 @@ html{
   .about-img{
     width: 100px;
     height: 110px;
+  }
+
+  .resume-button{
+    width: 100px;
+    height: 50px;
   }
 
   /* About About About About About About About About About */
