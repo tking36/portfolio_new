@@ -92,8 +92,8 @@ const About = () => {
                     </div>
                         <p className='about-disc'>Whether on a construction site or in the office, I always strive to create new things efficiently and creatively. Mastering the tools of my trade, I seek out the best techniques and apply them to achieve a product worth making.</p>
                         <div className='about-links' >
+                            <button className='button-54 resume-button' > <a className='resume-link' title='Resume' href={pdfFile} target='blank' >Resume</a> </button>
                             <button className='button-54 more-about' onClick={openModal}>More About Me</button>
-                            <button className='button-54' href={pdfFile} target='blank' >Resume</button>
                         </div>
                     </>
                     :

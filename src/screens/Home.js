@@ -40,8 +40,8 @@ const Home = () => {
                 </>
                 :
                 <>
-                <h1>Hello I am Taylor</h1>
-                <h2>Full Stack Web Developer</h2>
+                <h1 className='taylor' >Hello I am Taylor</h1>
+                <h2 className='full-stack' >Full Stack Web Developer</h2>
                 </>
                 }
                 <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Learn More</a>  </button>
