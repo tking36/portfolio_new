@@ -87,7 +87,7 @@ const Projects = () => {
       
       <h1 className='projects slide-in-right'>PROJECTS</h1>
       <div className="project-line slide-in-left"></div>
-      <div className='project-cont slide-in-bottom'>
+      <div className='project-cont slide-in-left'>
         {projectData.map((project, index) => (
           <div className='project' onClick={isMobile ? () => openModal(project) : null} key={index}> 
             <img src={project.imgSrc} className='project-img' alt={`Project ${index + 1}`} />
