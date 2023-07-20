@@ -61,33 +61,42 @@ const About = () => {
     <div className='triangle-down' ></div>
             <div className="line slide-in-right"></div>
             <div className='attributes'>
+                
                 <div className='att-cont slide-in-right' >
-                    <div className='att-pic'>
-                        <img src={boot} className='att-image' ></img>
+                    <div className='att-border'>
+                        <div className='att-pic'>
+                            <img src={boot} className='att-image' ></img>
+                        </div>
                     </div>
                     <h2 className='att-title'>Hardworking</h2>
                     <h3 className='att-info'>From start to finish, I give it my all.</h3>
                 </div>
 
                 <div className='att-cont slide-in-left' >
-                    <div className='att-pic'>
-                        <img src={growth} className='att-image'></img>
+                    <div className='att-border'>
+                        <div className='att-pic'>
+                            <img src={growth} className='att-image'></img>
+                        </div>
                     </div>
                     <h2 className='att-title'>Self-motivated</h2>
                     <h3 className='att-info'>I take initiative and proactively seek opportunities for growth and development.</h3>
                 </div>
 
                 <div className='att-cont slide-in-right' >
-                    <div className='att-pic'>
-                        <img src={idea} className='att-image'></img>
+                    <div className='att-border'>
+                        <div className='att-pic'>
+                            <img src={idea} className='att-image'></img>
+                        </div>
                     </div>
                     <h2 className='att-title'>Innovative</h2>
                     <h3 className='att-info'>I continuously seek out creative and fresh ideas to improve processes and outcomes.</h3>
                 </div>
 
                 <div className='att-cont slide-in-left' >
-                    <div className='att-pic'>
-                        <img src={vision} className='att-image'></img>
+                    <div className='att-border'>
+                        <div className='att-pic'>
+                            <img src={vision} className='att-image'></img>
+                        </div>
                     </div>
                     <h2 className='att-title'>Dedicated</h2>
                     <h3 className='att-info'>I am fully committed to the task at hand and strive to achieve the best results.</h3>

@@ -273,7 +273,18 @@ section {
   align-items: center;
   background-color: white;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  border: cyan 10px solid;
+  
+}
+
+.att-border{
+  width: 80px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cyan;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  
 }
 
 .att-image{
