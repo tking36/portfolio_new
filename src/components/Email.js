@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import React from 'react'
 import emailjs from '@emailjs/browser';
 
@@ -8,6 +8,24 @@ const form = useRef();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 580);
+    };
+
+    handleResize(); // Call the handler initially
+
+    // Add event listener to handle window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -55,7 +73,7 @@ const form = useRef();
         <h1 className='contact slide-in-top'>CONTACT</h1>
         <div className="line slide-in-bottom"></div>
         <h3 className="contact-info slide-in-left" >Reach Out</h3>
-      <div className="email-form slide-in-right">
+      <div className={isMobile ? "email-form" : "email-form slide-in-right"}>
         <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" value={name} onChange={handleNameChange} />

@@ -110,9 +110,11 @@ const About = () => {
                     </>
                     :
                     <>
+                    <div className='about-info-sect slide-in-left' >
                         <img src='https://i.imgur.com/Sypy7sg.jpg' className='about-img slide-in-left'></img>
                         <h2 className='slide-in-left' >Who am I?</h2>
-                        <p className='about-disc slide-in-left'>Whether on a construction site or in the office, I always strive to create new things efficiently and creatively. Mastering the tools of my trade, I seek out the best techniques and apply them to achieve a product worth making.</p>
+                        <p className='about-disc'>Whether on a construction site or in the office, I always strive to create new things efficiently and creatively. Mastering the tools of my trade, I seek out the best techniques and apply them to achieve a product worth making.</p>
+                        </div>
                         <div className='about-links' >
                             <button className='button-54 more-about' onClick={openModal}>More About Me</button>
                             <button className='button-54 resume-button' > <a className='resume-link' title='Resume' href={pdfFile} target='blank' >Resume</a> </button>
