@@ -448,6 +448,10 @@ margin-left: 20px;
   justify-content: flex-start;
 }
 
+/* .twoRow{
+  width: 40%;
+} */
+
 .project:hover .project-btn {
   display: block;
 }
@@ -872,6 +876,11 @@ margin-right: 2rem;
     width: 55px;
     height: 60px;
   }
+
+  .att-border{
+    width: 65px;
+    height: 70px;
+  }
   
 
   .about-info-sect{
@@ -1039,5 +1048,11 @@ margin-right: 2rem;
     
   }
 }
-  
+
+@media screen and (max-width: 701px) and (min-width: 581px){
+
+  .full-stack{
+    font-size: 19px;
+  }
+}
 

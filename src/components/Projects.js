@@ -39,6 +39,7 @@ const Projects = () => {
   
   const [selectedProject, setSelectedProject] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [twoRows, setTwoRows] = useState(false);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -82,6 +83,17 @@ const Projects = () => {
       };
     }, []);
 
+    useEffect(() => {
+        const handleRow = () => {
+            setTwoRows(window.innerWidth <= 1694 && window.innerWidth >= 1274);
+        };
+        handleRow();
+        window.addEventListener('resize', handleRow);
+        return () => {
+            window.removeEventListener('resize', handleRow);
+        }
+    }, []);
+
   return (
     <>
       
@@ -89,7 +101,8 @@ const Projects = () => {
       <div className="project-line slide-in-left"></div>
       <div className='project-cont slide-in-left'>
         {projectData.map((project, index) => (
-          <div className='project' onClick={isMobile ? () => openModal(project) : null} key={index}> 
+          <div className={twoRows ? 'project twoRow' : 'project'} 
+          onClick={isMobile ? () => openModal(project) : null} key={index}> 
             <img src={project.imgSrc} className='project-img' alt={`Project ${index + 1}`} />
             {!isMobile ?
             <>
