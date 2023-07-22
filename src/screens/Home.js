@@ -4,7 +4,7 @@ import Hexagons from '../components/Hexagons';
 import Projects  from '../components/Projects';
 import Email from '../components/Email';
 import Navigation from '../components/Navigation';
-import Social from '../components/Social';
+import Social from '../components/social';
 
 const Home = () => {
 

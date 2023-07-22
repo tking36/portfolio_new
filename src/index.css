@@ -408,7 +408,7 @@ margin-left: 20px;
 
 
 .section-3{
-  z-index: 100;
+  z-index: 99;
   position: relative;
   color: white;
   display: flex;
@@ -448,9 +448,6 @@ margin-left: 20px;
   justify-content: flex-start;
 }
 
-/* .twoRow{
-  width: 40%;
-} */
 
 .project:hover .project-btn {
   display: block;
@@ -476,7 +473,7 @@ margin-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: gray;
+  background-color: cyan;
   width: 100%;
   padding-bottom: 20px;
 }
@@ -518,6 +515,7 @@ margin-left: 20px;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99999999;
 }
 
 .show{
