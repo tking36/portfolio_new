@@ -22,7 +22,7 @@ const Projects = () => {
       imgSrc: 'https://i.imgur.com/LAoUMDs.png',
       title: 'Space Invaders',
       details: 'React Typescript',
-      info: 'This is a React app that uses Typscript and TSX. Choose your own adventure game. Travel space and defeat enemies to gather recourses for Earth.',
+      info: 'This is a React app that uses Typescript and TSX. Choose your own adventure game. Travel space and defeat enemies to gather recourses for Earth.',
       demo: 'https://space-invaders.herokuapp.com/',
       front: ' https://github.com/tking36/adventure_front_end'
     },
