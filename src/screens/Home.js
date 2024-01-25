@@ -44,7 +44,7 @@ const Home = () => {
                 <h2 className='full-stack' >Full Stack Web Developer</h2>
                 </>
                 }
-                <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Learn More</a>  </button>
+                <button className='button-54' role='button'> <a className='home-link' href='#section-2' >Learn More</a></button>
             </div>
         </section>
         

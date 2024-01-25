@@ -235,7 +235,7 @@ section {
 /* About About About About About About About About About About  */
 
 .section-2{
-  z-index: 100;
+  z-index: 99;
   position: relative;
   color: black;
   display: flex;
@@ -408,7 +408,7 @@ margin-left: 20px;
 
 
 .section-3{
-  z-index: 99;
+  z-index: 100;
   position: relative;
   color: white;
   display: flex;
@@ -813,7 +813,7 @@ margin-right: 2rem;
   
 
   .nav-links{
-    /* margin-left: 0px; */
+    margin-left: 0px;
   }
 
   .nav-link:hover{

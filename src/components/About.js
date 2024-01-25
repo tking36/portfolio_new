@@ -157,8 +157,9 @@ const About = () => {
                     <div className="skill-group">
                     <div className="skill-title">Frameworks</div>
                         <div className="skill-list">
-                            <p className="skill">BootStrap</p>
                             <p className="skill">React</p>
+                            <p className="skill">Angular</p>
+                            <p className="skill">BootStrap</p>
                             <p className="skill">Django</p>
                             <p className="skill">Express</p>
                         </div>

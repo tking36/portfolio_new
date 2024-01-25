@@ -30,8 +30,8 @@ const Projects = () => {
       imgSrc: 'https://i.imgur.com/JJttsuI.png',
       title: 'ShopKing',
       details: 'React JS / Django',
-      info: 'This is an Ecommerce React app made with Django, Postgres, AWS, Redux, and JWT.',
-      demo: 'https://king-shop.herokuapp.com/',
+      info: 'This is an Ecommerce React app made with Django, Postgres, AWS, Redux, and JWT. Demo Currently Unavailable due to AWS costs.',
+      // demo: 'https://king-shop.herokuapp.com/',
       front: ' https://github.com/tking36/ecommerce',
     },
   ];
